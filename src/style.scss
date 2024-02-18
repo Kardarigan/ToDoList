@@ -1,0 +1,88 @@
+$colorPrime: #646cff;
+$colorPrime-hover: #535bf2;
+$colorDark: #1a1a1a;
+$colorLight: #ebeefb;
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: $colorLight;
+}
+
+.todolist {
+    width: 500px;
+}
+
+button {
+    color: $colorLight;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: $colorDark;
+    cursor: pointer;
+    transition: border-color 0.25s;
+
+    &:hover {
+        border-color: $colorPrime;
+    }
+
+    &:focus,
+    &:focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+    }
+
+    &.add {
+        width: 30%;
+    }
+
+    &.add,
+    &.done {
+        background-color: $colorPrime;
+
+        &:hover {
+            border-color: $colorDark;
+        }
+    }
+}
+
+a {
+    font-weight: 500;
+    color: $colorPrime;
+    text-decoration: inherit;
+
+    &:hover {
+        color: $colorPrime-hover;
+    }
+}
+
+input {
+    all: unset;
+    width: 70%;
+    color: $colorLight;
+    padding: 0.6em 1.2em;
+    border: 3px solid $colorDark;
+    background-color: $colorDark;
+
+    &:focus {
+        border-color: $colorPrime;
+    }
+}
+
+ol {
+    padding: 0;
+
+    li {
+        font-weight: bold;
+        margin-top: 10px;
+        border: 1px solid $colorPrime;
+
+        span {
+            padding: 0.6em 1.2em;
+        }
+    }
+}
